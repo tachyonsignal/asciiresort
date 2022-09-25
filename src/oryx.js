@@ -8,7 +8,7 @@ function Oryx(node, bufferManager, _bufferId, fontSize = 12, initialSize = 100) 
 
   let numSelections = initialSize;
   const fragmentSelections = document.createDocumentFragment();
-  selectionEls = [];
+  const selectionEls = [];
   populateSelections(numSelections);
   selectionEls[0].style.visibility = 'visible';
   selectionEls[0].style.display = 'block';
