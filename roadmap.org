@@ -1,0 +1,89 @@
+** July 9 
+
+*** Release Versions 
+
+What is considered alpha, beta? 
+
+Alpha 1 ( 1 week )
+  - Theme: Editor FC ( featuere completion )
+  - UI 
+    - exit 
+  - file Managemet 
+    - local storage
+    - export 
+    - upload single file 
+    - show link between buffer and file management 
+  - Buffers 
+    - [x] list view 
+    - [ ] kill buffer 
+    - [ ] new empty buffer 
+  - Editor
+    - UI
+      - [x] display line count 
+      - [x] display linked buffer 
+      - [x]
+      - overflow
+        - [ ] horizontal 
+        - [ ] vertical
+    - text selection
+      - [x] cursor 
+      - line-oriented selection
+        - [x] single line text selection with keyboard ( shift )
+        - [x] multi line text selection with keyboard ( shift )
+        - [ ] multi-line text selection larger than viewport ( shift )
+        - [ ] select all 
+        - [ ] select everything before cursor 
+        - [ ] select everything after cursor
+        - [ ] mouse support 
+    - character set 
+      - [50%] ASCII
+    - editor 
+      [ ] paste 
+      [ ] 
+  - Multipler
+    - [x] two ( equal ) column view 
+    - [x] two ( equal ) row view
+    - [x] recursively split into halves
+    - [x] keyboard command to perform split 
+    - [x] click to focus on editor 
+    - [x] create and attach buffer to editor 
+    - detach editor from buffer
+    - delete editor 
+    - switch buffer 
+    - behavior around multiple editors pointed to one buffer
+    - command to rotate through active editors
+    - resize pane 
+    - three equal column view 
+    - three equal row view
+  - meta 
+    - 14kb 
+Alpha 2 
+  - Theme: OrgMode support ( featuere completion )
+
+Beta
+  - Theme: Platform compatibility 
+  - Keyboard bindings for Windows
+  - Works on Mobile 
+  - Mobile responsive UI 
+  - File management
+    - single user cloud 
+  - Editor 
+    - text selection
+      - multi cursor 
+      - rectangular selection 
+    - character set 
+      - chinese 
+      - korean
+      - japanese 
+      - vietnamese 
+      - diacritics 
+      - emoji
+      - utf-8
+      - APL 
+  - settings.json and configuration 
+  - dark mode 
+  - premium tier 
+  - authentication
+  - favorites
+  - publishing 
+  - layout controller 

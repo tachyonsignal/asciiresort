@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=en-US class=🌕>
+<title>AsciiResort</title>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Enjoy scenic plaintext views while getting your life sorted out.">
+<style>
+  @import "style.css";
+</style>
+<!-- TODO: reintroduce async, add a promise to block mux from running into Oryx is loaded.-->
+<script src=script.js defer></script>
+<script src=winston.js defer></script>
+<script src=oryx.js defer></script>
+<script src=mux.js defer></script>
+<script src=tarkov.js defer></script>
+<script src=init.js defer></script>
+
+<!-- Prevent fake favicon requests. https://stackoverflow.com/questions/1321878/how-to-prevent-favicon-ico-requests. -->
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+<body class="💪 🪜 🍜 📜 🌕" style="padding: 0 3rem; font: .75rem Helvetica, sans-serif;">
+  <header class="💪 🦠" style="align-items: center; flex: 0 3rem;">
+    <nav class="💪 🦷">
+      <a href="" class="🍣">EDIT</a>
+      <a href="">FAVORITES </a>
+      <a href="">PUBLISHED</a>
+      <a href="">ALL</a>
+      <a href="">SEARCH</a>
+    </nav>
+    <h1 style="font: 100 1.2rem serif;">ASCIIRESORT</h1>
+    <nav class="💪 🦷">
+      <a href="">CONCIERGE</a>
+      <a href="">ROOM UPGRADE</a>
+      <a href="">SETTINGS</a>
+      <a href="">EXIT</a>
+      <a href="">SIGN OUT</a>
+    </nav>
+  </header>
+  <main class="💪 🌳 📜">
+    <aside class="💪 🦠 🪖 🪜" style="flex: 0 17rem; margin-right: 3rem;">
+      <div>
+        <details>
+          <summary>cloud</summary>
+          <menu class="🔫 🚫">
+            <li id=file-a>index.html
+            <li>style.css
+          </menu>
+        </details>
+        <details open>
+          <summary>local</summary>
+          <menu class="🔫 🚫">
+            <li id=file-a>index.html
+            <li>style.css
+          </menu>
+        </details>
+        <details open>
+          <summary>Buffers</summary>
+          <ul class="🔫 🚫" id="aside-details-buffers">
+          </ul>
+        </details>
+        <details class=💪 onmouseover="$PS.pub(_0, this)" id="layouts-container">
+          <summary>Layout</summary>
+          <div class="lazy">
+            <div class="loader"></div>
+          </div>
+        </details>
+        <details class=💪 open data-component="file_controls">
+          <summary>Controls</summary>
+          <div class="lazy">
+            <div class="loader"></div>
+          </div>
+        </details>
+      </div>
+      <details class=💪 onmouseover="$PS.pub(_2, this)" id="hints-container">
+        <summary>Hints</summary>
+        <div class="lazy">
+          <div class="loader"></div>
+        </div>
+      </details>
+    </aside>
+    <!-- TODO: lazy load this -->
+    <div class="💪 🌳 📜 🪖 🪜" id="mux"></div>
+  </main>
+  <!-- Rethink when and what initiates drawing links between buffer and files. -->
+  <!-- <div class="lazy" style="position: fixed; inset: 0; z-index: -1;"></div> -->

@@ -1,0 +1,16 @@
+#+title: 🌴 AsciiResort 🌴
+#+author: Louis 
+
+* Design Priorities
+
+- performance: handles large documents (100M+ lines), 14kb, Unix-like snappiness
+- buffer-oriented 
+- multiplexed views ( for now, just panes. undecided on tabs)
+- text selection: rectangular editing, multi cursor
+- currently just ASCII. TBD on UTF-8, emojis and non-English languages.
+- zero-dependencies 
+
+* Components
+
+- OryxBuffer: editor instance. only concerned w/ lines of text and how to render itself
+- Mux: manages a set of Editor instances, and layout  

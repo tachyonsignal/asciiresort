@@ -1,0 +1,26 @@
+<div>
+  <fieldset>
+    <legend>Viewport</legend>
+    <label for="viewport-start">Viewport Start: </label>
+    <input id="viewport-start" value="0" size="9"></input>
+    <label for="viewport-size">Size:</label>
+    <input id="viewport-size" value="90" size="9"></input>
+    <button id="viewport-update" onclick="$PS.pub(_49)">Update</button>
+    <button id="viewport-scroll-up-1" onclick="$PS.pub(_100)">Scroll -1</button>
+    <button id="viewport-scroll-down-1" onclick="$PS.pub(_101)">Scroll +1</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>File</legend>
+    <input id="file-input" type="file" name="myFiles" onchange="$PS.pub(_30, this.files[0])">
+
+    <label for="file-size">total size:</label>
+    <span id="file-size"></span>
+
+    <button id="load-file" onclick="$PS.pub(_50)">Load File</button>
+    <button id="append-file" onclick="$PS.pub(_51)">Append File</button>
+
+    <label for="append-index">Position:</label>
+    <input id="append-index" value="1" size="9"></input>
+  </fieldset>
+</div>
