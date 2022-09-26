@@ -24,13 +24,13 @@
     ) => {
       template.innerHTML = `
       <figure class="💪 🪜 🍜 🥷 💯">
+        <figcaption><cite>Buffer: ${bufferId}</cite></figcaption>
         <blockquote cite="" class="💪 🍜 🥷 🌕 ">
         <div id="${id}" class="🦄" tabindex="0">
           <div class="🌮 🥷"></div>
           <div class="💪 💸">Line paneCount: <span class="🧛"></span></div>
         </div>
         </blockquote>
-        <figcaption><cite>Buffer: ${bufferId}</cite></figcaption>
       </figure>
     `,
         node = template[_Z].firstElementChild,                            // hold ref before we append and lose 

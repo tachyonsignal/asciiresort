@@ -8,6 +8,10 @@ Organization
 Units: use rems not ems
 /*********************************/
 
+:root {
+  --fg-color: black;
+  --bg-color: white;
+}
 /************* Boxes *************/
 .💪 { display: flex }                                 /* Flex like muscles.   */
 .🪜 { flex-flow: column }                             /* Vertically stack.    */
@@ -37,17 +41,38 @@ Units: use rems not ems
 .🥖 li::before             { content: ">" }             /* Breadcrumbs.       */
 .🥖 li:first-child::before { content: "" }
 /************* Resets *************/
-a             { text-decoration: none }
+a             { color:  var(--fg-color); text-decoration: none }
 a:hover, a.🍣 { text-decoration: underline }
-blockquote    { padding: .5rem; background-color: whitesmoke }
 /************* Editor **************/
 .loader {
   border: 5px solid;
-  border-top: 5px solid white;
+  border-top: 5px solid var(--bg-color);
   border-radius: 50%;
   width: 20px;
   height: 20px;
   animation: spin 2s linear infinite;
+}
+body {
+  font: 200 1.2rem sans-serif;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+aside {
+  flex: 0 17rem;
+  border-top: 1px solid var(--fg-color);
+  padding: 1rem 3rem;
+}
+header {
+  padding: 0 3rem;
+  align-items: center;
+}
+#mux {
+  box-shadow:
+    0px 0 0 0 var(--fg-color),
+    0 0px 0 0 var(--fg-color),
+    0px 0px 0 0 var(--fg-color),   /* Just to fix the corner */
+    1px 0 0 0 var(--fg-color) inset,
+    0 0px 0 0 var(--fg-color) inset;
 }
 @keyframes spin { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
 
@@ -65,10 +90,10 @@ blockquote    { padding: .5rem; background-color: whitesmoke }
   width: 100%;
   display: flex;
   flex-direction: column;
+  color: var(--fg-color);
 }
 
 .🦄 .🌮 {
-  border: 1px solid;
   line-height: 12px;
   flex-grow: 1;
   overflow: hidden;
@@ -86,17 +111,27 @@ blockquote    { padding: .5rem; background-color: whitesmoke }
 .🦄 .🧹 {
   left: 0ch;
   top: 0ch;
-  background-color: black;
+  background-color: green;;
   position: absolute;
-  opacity: .5;
+  opacity: .7;
   width: 1ch;
   height: 12px;
 }
 .🦄 .💸 {
-  background-color: black;
-  color: white;
+  padding: 6px;
 }
-.💪.mux-active {
-  border: 1px solid limegreen;
+
+figure.🍜 {
   box-sizing: border-box;
+  box-shadow: 
+  1px 0 0 0  var(--fg-color), 
+  0 1px 0 0  var(--fg-color),
+  1px 1px 0 0  var(--fg-color),  
+  1px 0 0 0 var(--fg-color) inset, 
+  0 1px 0 0  var(--fg-color) inset;
+}
+
+.mux-active .🦄 .💸, .mux-active figcaption {
+  background-color:  var(--fg-color);
+  color:  var(--bg-color);
 }
