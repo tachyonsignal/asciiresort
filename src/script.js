@@ -43,7 +43,7 @@ const _49 = 49; $PS.sub(_49, () => {                                       // 'V
   const viewportSize = parseInt($('#viewport-size')[0].value);
 
   // this assumes layoutManager is loaded.
-  const editor = layoutManager.getActiveEditor();
+  const editor = layoutManager.getActivePane().editor;
   editor.ViewState.set(viewportStart, viewportSize);
   editor.Selection.setCursor(0, 0);
   editor.render();
@@ -56,7 +56,7 @@ const _50 = 50; $PS.sub(_50, () => {                                     // 'DOC
   }
   f.text().then(text => {
     // this assumes layoutManager is loaded.
-    layoutManager.getActiveEditor().Model.text = text;
+    layoutManager.getActivePane().editor.Model.text = text;
     const t1 = performance.now();
     console.log(`Reading file took ${t1 - t0} millis.`);
   });
@@ -79,7 +79,7 @@ const _51 = 51; $PS.sub(_51, _ => {                                             
 
     const s = text.split("\n");
     const t0 = performance.now();
-    const o = layoutManager.getActiveEditor();
+    const o = layoutManager.getActivePane().editor;
     o.Model.splice(index, s);
     o.ViewState.start = 0;
     o.Selection.setCursor(0, 0);
@@ -89,8 +89,8 @@ const _51 = 51; $PS.sub(_51, _ => {                                             
     console.log(`Took ${parseFloat(t1 - t0).toFixed(2)} millis to splice ${s.length.toLocaleString()} elements at ${index.toLocaleString()} w/ ${o.ViewState.lc.toLocaleString()} lines.`);
   });
 })
-const _100 = 100; $PS.sub(_100, _ => layoutManager.getActiveEditor().ViewState.scroll(-1)); // 'VIEWPORT_SCROLL_UP_1'
-const _101 = 101; $PS.sub(_101, _ => layoutManager.getActiveEditor().ViewState.scroll(1));  // 'VIEWPORT_SCROLL_DOWN_1'
+const _100 = 100; $PS.sub(_100, _ => layoutManager.getActivePane().editor.ViewState.scroll(-1)); // 'VIEWPORT_SCROLL_UP_1'
+const _101 = 101; $PS.sub(_101, _ => layoutManager.getActivePane().editor.ViewState.scroll(1));  // 'VIEWPORT_SCROLL_DOWN_1'
 // Usage Guide
 //   $(<selector>) or $(<domNode>) to get a minimal jQuery-like object, which is collection of elements
 //   $(<jqueryLikeObject>).on('click', <fn>) to handle click events

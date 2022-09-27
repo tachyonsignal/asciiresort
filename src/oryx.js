@@ -42,11 +42,11 @@ function Oryx(node, bufferManager, _bufferId, fontSize = 12, initialSize = 100) 
     get end() {
       return Math.min(this.start + this.size - 1, Model.lastIndex);
     },
-    scroll(delta, render = true) {
+    scroll(delta, reRender = true) {
       this.start = Math.min(Math.max(0, this.start + delta), Model.lastIndex);
       RENDER_FLAGS.lineContentsStart = 0;
       RENDER_FLAGS.lineContentsEnd = ViewState.size;
-      if (render) render(RENDER_FLAGS);
+      if (reRender) render(RENDER_FLAGS);
     },
     set(start, size) {
       // TODO: use a proxy to validate.

@@ -1,5 +1,7 @@
+let layoutManager;
 document.addEventListener('DOMContentLoaded', () => {
-  $TARKOV($Mux($('#mux'), $WINSTON()));
+  layoutManager = $Mux($('#mux'), $WINSTON());
+  $TARKOV(layoutManager);
 
   // Execute the lazy directives. Currently they assume each element only 
   // has 1 child that is a lazy slot.
